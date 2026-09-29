@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Layzercraft – druki 3D</title>
+<style>
+:root{--bg:#0b0b12;--card:#161624;--tx:#f2f2f8;--mu:#9a9ab4;--ac:#ff6a00;--ac2:#a020f0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f4fb;--card:#fff;--tx:#181826;--mu:#5c5c78}}
+:root[data-theme="dark"]{--bg:#0b0b12;--card:#161624;--tx:#f2f2f8;--mu:#9a9ab4}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+.hero{text-align:center;padding:56px 20px 32px;background:radial-gradient(ellipse at 50% 0,rgba(160,32,240,.35),transparent 65%),radial-gradient(ellipse at 80% 30%,rgba(255,106,0,.25),transparent 60%)}
+.logo{font-size:clamp(2.4rem,9vw,4.5rem);font-weight:900;letter-spacing:-1px;margin:0;background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mu);max-width:520px;margin:10px auto 0}
+.beam{height:3px;width:120px;margin:18px auto 0;background:linear-gradient(90deg,var(--ac),var(--ac2));border-radius:3px;box-shadow:0 0 18px var(--ac)}
+nav{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:16px}
+nav button{font:inherit;font-weight:700;border:2px solid transparent;background:var(--card);color:var(--tx);padding:10px 18px;border-radius:999px;cursor:pointer}
+nav button.on{background:linear-gradient(90deg,var(--ac),var(--ac2));color:#fff}
+main{max-width:980px;margin:0 auto;padding:8px 16px 40px}
+.sec{display:none}.sec.on{display:block}
+h2{margin:8px 0 4px}
+.sub{color:var(--mu);margin:0 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.item{background:var(--card);border-radius:18px;padding:16px;border:1px solid rgba(160,32,240,.25);transition:transform .2s}
+.item:hover{transform:translateY(-4px)}
+.pic{height:140px;border-radius:12px;display:grid;place-items:center;font-size:64px;margin-bottom:12px;background:linear-gradient(135deg,var(--a),var(--b))}
+.item h3{margin:0 0 4px;font-size:1.05rem}
+.item p{margin:0;color:var(--mu);font-size:.9rem}
+.tag{display:inline-block;margin-top:10px;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:999px;background:rgba(255,106,0,.18);color:var(--ac)}
+footer{text-align:center;padding:28px 16px;color:var(--mu);border-top:1px solid rgba(160,32,240,.25)}
+.cta{display:inline-block;margin-top:8px;padding:12px 26px;border-radius:999px;background:linear-gradient(90deg,var(--ac),var(--ac2));color:#fff;font-weight:800;text-decoration:none}
+</style>
+</head>
+<body>
+<header class="hero">
+<h1 class="logo">LAYZERCRAFT</h1>
+<p>Warstwa po warstwie – oryginalne druki 3D robione z pasją. Wybierz kategorię i zamów swój ulubiony model.</p>
+<div class="beam"></div>
+</header>
+<nav id="tabs">
+<button class="on" data-t="hal">🎃 Halloween</button>
+<button data-t="dra">🐉 Flexi smoki</button>
+<button data-t="kar">🗡️ Karambity</button>
+<button data-t="bre">🔑 Breloki</button>
+</nav>
+<main>
+<section id="hal" class="sec on">
+<h2>🎃 Halloween</h2><p class="sub">Straszne i urocze dekoracje prosto z drukarki.</p>
+<div class="grid">
+<div class="item"><div class="pic" style="--a:#ff6a00;--b:#7a1fa2">🎃</div><h3>Dynia świecąca</h3><p>Pod tealight lub LED.</p><span class="tag">Halloween</span></div>
+<div class="item"><div class="pic" style="--a:#3b1a6b;--b:#111">👻</div><h3>Duszek</h3><p>Ozdoba na półkę lub okno.</p><span class="tag">Halloween</span></div>
+<div class="item"><div class="pic" style="--a:#1c1c2e;--b:#a020f0">🦇</div><h3>Nietoperze</h3><p>Zestaw na ścianę.</p><span class="tag">Zestaw</span></div>
+<div class="item"><div class="pic" style="--a:#2a2a2a;--b:#ff6a00">💀</div><h3>Czaszka</h3><p>Detale jak z horroru.</p><span class="tag">Halloween</span></div>
+</div></section>
+<section id="dra" class="sec">
+<h2>🐉 Flexi smoki</h2><p class="sub">Ruchome, przegubowe smoki – drukowane w jednym kawałku.</p>
+<div class="grid">
+<div class="item"><div class="pic" style="--a:#0f9d58;--b:#0b3d2e">🐉</div><h3>Smok zielony</h3><p>Giętki, jak żywy.</p><span class="tag">Flexi</span></div>
+<div class="item"><div class="pic" style="--a:#a020f0;--b:#ff6a00">🐲</div><h3>Smok tęczowy</h3><p>Filament gradientowy.</p><span class="tag">Flexi</span></div>
+<div class="item"><div class="pic" style="--a:#1e6bff;--b:#0a1a4a">🐉</div><h3>Smok lodowy</h3><p>Chłodny błękit.</p><span class="tag">Flexi</span></div>
+<div class="item"><div class="pic" style="--a:#ff2a2a;--b:#4a0a0a">🔥</div><h3>Smok ognisty</h3><p>Idealny prezent.</p><span class="tag">Flexi</span></div>
+</div></section>
+<section id="kar" class="sec">
+<h2>🗡️ Karambity</h2><p class="sub">Atrapy i trenażery – wyłącznie kolekcjonerskie, bez ostrza.</p>
+<div class="grid">
+<div class="item"><div class="pic" style="--a:#222;--b:#ff6a00">🗡️</div><h3>Karambit klasyczny</h3><p>Model do kolekcji.</p><span class="tag">Karambit</span></div>
+<div class="item"><div class="pic" style="--a:#111;--b:#a020f0">🗡️</div><h3>Karambit neon</h3><p>Fluorescencyjne kolory.</p><span class="tag">Karambit</span></div>
+<div class="item"><div class="pic" style="--a:#0f5;--b:#012">🗡️</div><h3>Trenażer</h3><p>Do ćwiczeń i cosplayu.</p><span class="tag">Karambit</span></div>
+</div></section>
+<section id="bre" class="sec">
+<h2>🔑 Breloki</h2><p class="sub">Małe, kolorowe i personalizowane.</p>
+<div class="grid">
+<div class="item"><div class="pic" style="--a:#ff6a00;--b:#a020f0">🔑</div><h3>Brelok z imieniem</h3><p>Dowolny napis i kolor.</p><span class="tag">Własny napis</span></div>
+<div class="item"><div class="pic" style="--a:#0f9d58;--b:#111">🐉</div><h3>Mini smok</h3><p>Ruchomy brelok.</p><span class="tag">Flexi</span></div>
+<div class="item"><div class="pic" style="--a:#7a1fa2;--b:#111">🎃</div><h3>Halloweenowy</h3><p>Dynia, duch, czaszka.</p><span class="tag">Halloween</span></div>
+<div class="item"><div class="pic" style="--a:#1e6bff;--b:#111">⭐</div><h3>Logo / wzór</h3><p>Zrobimy według Twojego pomysłu.</p><span class="tag">Na zamówienie</span></div>
+</div></section>
+</main>
+<footer>
+<div>Masz pomysł na własny model?</div>
+<a class="cta" href="#tabs">Napisz do nas</a>
+<p>© Layzercraft – druk 3D</p>
+</footer>
+<script>
+document.querySelectorAll('#tabs button').forEach(function(b){
+b.addEventListener('click',function(){
+document.querySelectorAll('#tabs button,.sec').forEach(function(e){e.classList.remove('on')});
+b.classList.add('on');document.getElementById(b.dataset.t).classList.add('on');
+});});
+</script>
+</body>
+</html>
